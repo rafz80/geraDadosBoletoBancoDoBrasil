@@ -102,7 +102,7 @@ if response.status_code == 200:
 	payload = ET.fromstring(response.text)
 	for node in payload.iter():
 				
-		print(node.tag.replace('{http://www.tibco.com/schemas/bws_registro_cbr/Recursos/XSD/Schema.xsd}', '') + ' - ' + str(node.text))
+		print(node.tag, str(node.text))
 		
 		# pegue as informações e monte seu boleto
 
